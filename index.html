@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tech blog</title>
-</head>
-<body>
-    <h2>
-        What? what? what?
-    </h2>
-</body>
+    <script type="module" src="script.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      h3 {
+        color: red;
+      }
+      .p-1 {
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="p-1">
+      <ab-card heading="new sale">
+        
+        <p>something is up</p>
+        <button>ok!</button>
+      </ab-card>
+    </div>
+
+    <template id="template">
+      <style>
+        :host {
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+          padding: 10px;
+          border-radius: 10px;
+          background: linear-gradient(rgb(206, 206, 244), rgb(207, 140, 140));
+          display: block;
+          min-width: 100%;
+        }
+      </style>
+      <h3></h3>
+      <slot></slot>
+    </template>
+  </body>
 </html>
