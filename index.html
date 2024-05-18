@@ -26,11 +26,7 @@
 
   <body>
     <div class="p-1">
-      <ab-card heading="new sale">
-        
-        <p>something is up</p>
-        <button>ok!</button>
-      </ab-card>
+      <lut-counter value="0"></lut-counter>
     </div>
 
     <template id="template">
@@ -44,8 +40,9 @@
           min-width: 100%;
         }
       </style>
+      <button id="subtract">-</button>
       <h3></h3>
-      <slot></slot>
+      <button id="add">+</button>
     </template>
   </body>
 </html>
