@@ -1,3 +1,5 @@
+//counter example with web-components
+
 class Card extends HTMLElement {
   constructor() {
     super();
@@ -9,11 +11,13 @@ class Card extends HTMLElement {
     this.valueHeader.innerHTML = this.value;
     this.substractBtn = this.shadowRoot.querySelector("#subtract");
     this.addBtn = this.shadowRoot.querySelector("#add");
+    this.add = this.add.bind(this);
+    this.substract = this.substract.bind(this);
   }
 
   connectedCallback() {
-    this.addBtn.addEventListener("click", this.add.bind(this));
-    this.substractBtn.addEventListener("click", this.substract.bind(this));
+    this.addBtn.addEventListener("click", this.add);
+    this.substractBtn.addEventListener("click", this.substract);
   }
 
   get value() {
@@ -26,12 +30,10 @@ class Card extends HTMLElement {
 
   substract() {
     this.value = +this.value - 1;
-    console.log(this.value);
   }
 
   add() {
     this.value = +this.value + 1;
-    console.log(this.value);
   }
 
   static get observedAttributes() {
@@ -48,3 +50,67 @@ class Card extends HTMLElement {
   }
 }
 customElements.define("lut-counter", Card);
+
+//tab component
+
+function getTabs() {
+  const tabs = Array.from(
+    document.querySelectorAll('[role="tablist"] [role="tab"]')
+  );
+  return tabs;
+}
+
+function getPanels() {
+  const panels = Array.from(document.querySelectorAll('[role="panel"]'));
+  console.log(panels);
+  return panels;
+}
+
+function selectTab(elem, index) {
+  const tabs = getTabs();
+  const panels = getPanels();
+
+  for (const tab of tabs) {
+    tab.setAttribute("aria-selected", false);
+  }
+
+  for (const panel of panels) {
+    panel.hidden = true;
+    panel.setAttribute("aria-selected", false);
+  }
+
+  const selectedTab = tabs[index];
+  const selectedPanel = panels[index];
+
+  selectedTab.focus();
+  selectedTab.setAttribute("aria-selected", true);
+
+  selectedPanel.hidden = false;
+  selectedPanel.setAttribute("aria-selected", true);
+  elem.dispatchEvent(
+    new Event("lut-tab-changed", {
+      bubbles: true,
+      details: {
+        relatedTarget: selectedPanel,
+      },
+    })
+  );
+}
+
+class Tabs extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", (event) => {
+      console.log("i am clicked ");
+      // Get all tabs
+      const tabs = getTabs();
+      // Find tab that was clicked
+      const tab = event.target.closest('[role="tab"]');
+      if (!tab?.closest('[role="tablist"]')) return;
+      // Get index of tab that was clicked
+      const index = tabs.indexOf(tab);
+      selectTab(this, index);
+    });
+  }
+}
+customElements.define("lut-tabs", Tabs);
