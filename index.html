@@ -1,70 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/abcode.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tech blog</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="script.js"></script>
+    <title>Vite + Lit</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/my-element.js"></script>
   </head>
-
   <body>
-    <div class="p-1">
-      <!-- counter  -->
-      <lut-counter value="0"></lut-counter>
-      <template id="template">
-        <style>
-          :host {
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-            padding: 10px;
-            border-radius: 10px;
-            background: linear-gradient(rgb(206, 206, 244), rgb(207, 140, 140));
-            display: block;
-            min-width: 100%;
-          }
-        </style>
-        <button id="subtract">-</button>
-        <h3></h3>
-        <button id="add">+</button>
-      </template>
-
-      <!-- tabs -->
-      <lut-tabs>
-        <div role="tablist">
-          <button role="tab" aria-selected>One</button>
-          <button role="tab">Two</button>
-          <button role="tab">Three</button>
-        </div>
-        <div role="panel" aria-selected>One</div>
-        <div role="panel" hidden>Two</div>
-        <div role="panel" hidden>Three</div>
-      </lut-tabs>
-
-      <h2>links that I used to learn web-components and lit</h2>
-      <p>I started with this guy's course, it's on his website, I hope it will stay public for a long time. <a href="https://levelup.video/tutorials/web-components-for-beginners/where-to-go-from-here" target="_blank" rel="noopener noreferrer" >LevelUp Tutorials</a></p>
-      <p>then followed a bunch of people from the web. here's a list:</p>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=R4Ri4ft7bXY">JsHeroes</a> == <a href="https://www.youtube.com/watch?v=3v8_tjJBu_I">Stanford</a> conference with Zach Leatherman form Eleventy</li>
-        <li><a href="https://www.youtube.com/watch?v=wmGmKSLfVCY&list=PLyuRouwmQCjnENQk6NJlckZRXOfQP0x5B&index=6">Prof3ssorSt3v3</a> Profesor STeve</li>
-        <li><a href="https://www.youtube.com/watch?v=2I7uX8m0Ta0">web dev simplified</a> fast intro to web components</li>
-        <li><a href="https://www.youtube.com/watch?v=j9rn2180mNI"></a>Elliot Marquez talks about lit</li>
-        <li><a href="https://www.youtube.com/watch?v=T5nrB5t5pMw&list=PLUioGv_6G9YK-St5GcrI8pm-OxPGDAt8r">Fabio Biondi</a> Playlist to create new app with lit and Vite</li>
-      </ul>
-    
-    
-    </div>
+    <my-element>
+      <h1>test 123</h1>
+    </my-element>
   </body>
 </html>
