@@ -36,3 +36,25 @@ to run the dist in a separate server, use the vscode extension LiveServer, right
 \- Add a hero section with a title, description and a button on the left side, and a picture of a dude (me) on the right side. Animate as they come in to view, just a simple fade in, but first left side, then image. [link](https://dribbble.com/shots/16514975-Personal-portfolio-website)
 \- There are 3-4 css round divs like balls that move randomly in the background. the background is also comprised of 2-3 large balls that have different colors and background has backdrop-filter so it's all like blurred glass. Maybe. dunno. 
 \- add 3 glassmorphism cards with an icon, title, description and a button. [link](https://codepen.io/abcodecc)
+
+
+- - - 
+
+## Technologies used
+- [lit](https://lit.dev/)
+- [rollup](https://rollupjs.org/guide/en/)
+- [web-dev-server](https://modern-web.dev/docs/dev-server/overview/)
+- [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+- [tailwindcss](https://tailwindcss.com/)
+- [postcss](https://postcss.org/)
+- [redux](https://redux.js.org/)
+<!-- - [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [redux-thunk](https://github.com/reduxjs/redux-thunk)
+- [redux-persist](https://github.com/rt2zz/redux-persist)
+- [redux-persist-cookie-storage](https://github.com/rt2zz/redux-persist-cookie-storage)
+- [redux-persist-filesystem-storage](https://github.com/rt2zz/redux-persist-filesystem-storage)
+- [redux-persist-webextension-storage](https://github.com/rt2zz/redux-persist-webextension-storage)
+- [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [redux-persist-transform-filter](https://github.com/rt2zz/redux-persist-transform-filter)
+- [redux-persist-transform-compress](https://github.com/rt2zz/redux-persist-transform-compress) -->
+
