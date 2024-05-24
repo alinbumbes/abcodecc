@@ -27,8 +27,9 @@ to run the dist in a separate server, use the vscode extension LiveServer, right
 ## TODO
 1. [x] setup environment, figure out how to run a lit project without typescript and without a build system. Tried Vite, but it's not working out for me, then I tried Rollup and it's working fine for now.
 
-2. [ ] Make some basic components. A menu bar, a hero section, a footer and a page section. REAL basic, minimal styling. This will be main page. 
+2. [ ] build a To-do app like [todomvc](https://todomvc.com/) with lit components or like [this guy](https://lit-todo.netlify.app/)
 
+3. [ ] save data to mongoDB account, retrieve data from mongoDb using axios
 3. [ ] implement tailwind and rewrite everything to use it. 
 
 4. [ ] Create a simple portfolio website: Glassmorphism style. [link](https://fa-glassmorphism-portfolio.netlify.app/) 
@@ -41,13 +42,18 @@ to run the dist in a separate server, use the vscode extension LiveServer, right
 - - - 
 
 ## Technologies used
+**primary**
 - [lit](https://lit.dev/)
 - [rollup](https://rollupjs.org/guide/en/)
 - [web-dev-server](https://modern-web.dev/docs/dev-server/overview/)
+- [axios](https://github.com/axios/axios)
+
+**other**
 - [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
 - [tailwindcss](https://tailwindcss.com/)
 - [postcss](https://postcss.org/)
 - [redux](https://redux.js.org/)
+
 <!-- - [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
 - [redux-thunk](https://github.com/reduxjs/redux-thunk)
 - [redux-persist](https://github.com/rt2zz/redux-persist)
