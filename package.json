@@ -1,28 +1,25 @@
 {
-  "name": "abcodecc",
-  "version": "0.0.0",
-  "type": "module",
+  "name": "starter-rollup-bare-module-specifiers",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "start": "wds --node-resolve --app-index src/index.html --open --watch",
+    "dist-dev": "npm run start && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alinbumbes/abcodecc.git"
-  },
-  "author": "Alin Bumbes",
-  "license": "GNU GENERAL PUBLIC LICENSE",
-  "bugs": {
-    "url": "https://github.com/alinbumbes/abcodecc/issues"
-  },
-  "homepage": "https://github.com/alinbumbes/abcodecc#readme",
-  "description": "project for the website abcode.cc",
-
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "lit": "^3.1.2"
+    "lit": "^3.1.3"
   },
   "devDependencies": {
-    "vite": "^5.2.0"
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@web/dev-server": "^0.4.5",
+    "rollup": "^4.18.0",
+    "rollup-plugin-copy": "^3.5.0"
   }
 }
