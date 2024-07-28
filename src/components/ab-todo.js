@@ -1,26 +1,32 @@
-import { LitElement, html, css } from "lit";
-import { AbTodoItem } from "./ab-todo-item";
+import { LitElement, html, css } from 'lit'
+import { AbTodoItem } from './ab-todo-item'
 
 export class AbTodo extends LitElement {
   static properties = {
     todos: { type: Array },
     newTodo: { type: String },
-  };
+  }
 
   constructor() {
-    super();
-    this.todos = [];
-    this.newTodo = "";
+    super()
+    this.todos = []
+    this.newTodo = ''
   }
 
   static styles = css`
+    .todo-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
     .todo-container {
       max-width: 300px;
       margin: auto;
       padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 0 none;
+      border-radius: 0.5rem;
+      box-shadow:var(--shadow-default);
+      background-color: var(--bg-layer-1);
     }
     .add-todo {
       display: flex;
@@ -45,39 +51,39 @@ export class AbTodo extends LitElement {
     button:disabled {
       background-color: #ccc;
     }
-  `;
+  `
 
   addTodo() {
     if (this.newTodo.trim()) {
-      this.todos = [...this.todos, this.newTodo];
-      this.newTodo = "";
+      this.todos = [...this.todos, this.newTodo]
+      this.newTodo = ''
     }
   }
 
   handleInput(e) {
-    this.newTodo = e.target.value;
+    this.newTodo = e.target.value
   }
 
   removeTodoHandler(e) {
-    const index = e.detail.index;
-    this.todos = this.todos.filter((_, i) => i !== index);
+    const index = e.detail.index
+    this.todos = this.todos.filter((_, i) => i !== index)
   }
 
   connectedCallback() {
-    super.connectedCallback();
-    this.addEventListener("remove-todo", this.removeTodoHandler);
+    super.connectedCallback()
+    this.addEventListener('remove-todo', this.removeTodoHandler)
   }
 
   disconnectedCallback() {
-    this.removeEventListener("remove-todo", this.removeTodoHandler);
-    super.disconnectedCallback();
+    this.removeEventListener('remove-todo', this.removeTodoHandler)
+    super.disconnectedCallback()
   }
 
   render() {
     return html`
       <div class="todo-container">
         <h3>To-Do List</h3>
-        <ul>
+        <ul class="todo-list">
           ${this.todos.map(
             (todo, index) => html`
               <li>
@@ -87,19 +93,12 @@ export class AbTodo extends LitElement {
           )}
         </ul>
         <div class="add-todo">
-          <input
-            type="text"
-            .value="${this.newTodo}"
-            @input="${this.handleInput}"
-            placeholder="New to-do"
-          />
-          <button @click="${this.addTodo}" ?disabled="${!this.newTodo.trim()}">
-            Add
-          </button>
+          <input type="text" .value="${this.newTodo}" @input="${this.handleInput}" placeholder="New to-do" />
+          <button @click="${this.addTodo}" ?disabled="${!this.newTodo.trim()}"> Add </button>
         </div>
       </div>
-    `;
+    `
   }
 }
 
-customElements.define("ab-todo", AbTodo);
+customElements.define('ab-todo', AbTodo)

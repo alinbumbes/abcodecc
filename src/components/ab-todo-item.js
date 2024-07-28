@@ -10,8 +10,9 @@ export class AbTodoItem extends LitElement {
     :host {
       display: flex;
       justify-content: space-between;
-      padding: 8px;
-      border-bottom: 1px solid #eee;
+      padding: var(--pad);
+      border-bottom: 1px solid var(--color-border);
+      background-color:var(--bg-layer-2);
     }
   `;
 

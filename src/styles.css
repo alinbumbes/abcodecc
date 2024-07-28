@@ -1,15 +1,39 @@
 :root {
+    --bg-body: #fff;
     --primary-color: blue;
     --secondary-color: #fff;
+    --bg-wh-bk: #fff;
+    --bg-layer-0: #f0f0f0;
+    --bg-layer-1: #f1f2f4;
+    --bg-layer-2: #fafafa;
+    --pad: 1rem;
+    --border-radius-lg:.75rem;
+    --border-radius: .5rem;
+    --border-radius-sm: .25rem;
+    --color-border: #e1e1e1;
+    --shadow-default: rgba(25, 34, 40, 0.25) 0px 1px 1px 0px, rgba(33, 41, 53, 0.31) 0px 0px 1px 0px;
 }
-
-body {
+html{
     font-family: Arial, sans-serif;
+    font-size: 16px;
+    
+
+}
+body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    align-items: center; */
+    min-height: 100vh;
+    background-color:var(--bg-body);
+    display: grid;
+    grid-template-rows: 1fr auto;
+
   }
+
+main, footer {
+    display: block;
+}
+
