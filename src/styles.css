@@ -1,39 +1,111 @@
 :root {
-    --bg-body: #fff;
-    --primary-color: blue;
-    --secondary-color: #fff;
-    --bg-wh-bk: #fff;
-    --bg-layer-0: #f0f0f0;
-    --bg-layer-1: #f1f2f4;
-    --bg-layer-2: #fafafa;
-    --pad: 1rem;
-    --border-radius-lg:.75rem;
-    --border-radius: .5rem;
-    --border-radius-sm: .25rem;
-    --color-border: #e1e1e1;
-    --shadow-default: rgba(25, 34, 40, 0.25) 0px 1px 1px 0px, rgba(33, 41, 53, 0.31) 0px 0px 1px 0px;
-}
-html{
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    
+  --bg-body: #fff;
+  --primary-color: blue;
+  --secondary-color: #fff;
+  --ab-text: #172b4d;
+  --bg-wh-bk: #fff;
+  --bg-layer-0: #f0f0f0;
+  --bg-layer-1: #f1f2f4;
+  --bg-layer-2: #fafafa;
 
+  --pad: 1rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius: 0.5rem;
+  --border-radius-sm: 0.25rem;
+  --color-border: #e1e1e1;
+  --shadow-default: rgba(25, 34, 40, 0.25) 0px 1px 1px 0px, rgba(33, 41, 53, 0.31) 0px 0px 1px 0px;
+}
+html {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
-    min-height: 100vh;
-    background-color:var(--bg-body);
-    display: grid;
-    grid-template-rows: 1fr auto;
-
-  }
-
-main, footer {
-    display: block;
+  min-height: 100vh;
+  background-color: var(--bg-body);
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
+footer {
+  display: block;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 10rem 1fr 10rem;
+}
+
+.ft-logo-icon {
+  border-radius: 50%;
+  box-shadow:0 2px 7px -2px #000, 0 1px 2px 0px #000;
+  aspect-ratio: 1;
+  max-width: 2rem;
+}
+/* ------------------------------------------- */
+/* utilities */
+/* ------------------------------------------- */
+.flx {
+  display: flex;
+}
+
+.flx-fill {
+  flex: 1 1 auto;
+}
+
+.flx-align-center {
+  align-items: center;
+}
+
+.flx-just-center {
+  justify-content: center;
+}
+.gap-1 {
+  gap:0.25rem;
+}
+
+.gap-2 {
+  gap:0.5rem;
+}
+
+.gap-3 {
+  gap:0.75rem;
+}
+
+.gap-4 {
+  gap:1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template-2-col {
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.d-block {
+  display: block;
+}
+
+.p-1 {
+  padding:0.25rem;
+}
+
+.p-2 {
+  padding:0.5rem;
+}
+
+.p-3 {
+  padding:0.75rem;
+}
+
+.p-4 {
+  padding:1rem;
+}

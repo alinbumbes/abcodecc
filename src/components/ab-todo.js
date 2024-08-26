@@ -18,6 +18,9 @@ export class AbTodo extends LitElement {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
     }
     .todo-container {
       max-width: 300px;
@@ -25,7 +28,7 @@ export class AbTodo extends LitElement {
       padding: 20px;
       border: 0 none;
       border-radius: 0.5rem;
-      box-shadow:var(--shadow-default);
+      box-shadow: var(--shadow-default);
       background-color: var(--bg-layer-1);
     }
     .add-todo {

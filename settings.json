@@ -1,0 +1,49 @@
+// this file can be found in C:\Users\<user>\AppData\Roaming\Code\User\settings.json
+// it contains all my settings for VSCODE.
+// for list of extensions used
+//      esbenp.prettier-vscode
+//      ritwickdey.liveserver
+//      runem.lit-plugin
+//      shd101wyy.markdown-preview-enhanced
+//      styled-components.vscode-styled-components
+{
+  "files.autoSave": "afterDelay",
+  "editor.linkedEditing": true,
+  "editor.wordWrapColumn": 140,
+  "editor.minimap.maxColumn": 140,
+  "security.workspace.trust.untrustedFiles": "open",
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.endOfLine": "auto",
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSameLine": true,
+  "workbench.activityBar.location": "top",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "'CaskaydiaCove NF'",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "editor.background": "#000000",
+      "sideBar.background": "#000000",
+      "sideBar.border": "#000000",
+      "activityBar.background": "#000000",
+      "minimap.background": "#000000",
+      "terminal.background": "#000000",
+      "panel.background": "#000000",
+      "panel.border": "#000000"
+    }
+  }
+}
