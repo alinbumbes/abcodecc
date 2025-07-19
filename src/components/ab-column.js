@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit'
 import { AbTodoItem } from './ab-todo-item'
 
-export class AbTodo extends LitElement {
+export class AbColumn extends LitElement {
   static properties = {
     todos: { type: Array },
     newTodo: { type: String },
@@ -103,5 +103,4 @@ export class AbTodo extends LitElement {
     `
   }
 }
-
-customElements.define('ab-todo', AbTodo)
+customElements.define('ab-column', AbColumn)

@@ -35,7 +35,7 @@ export class RightPanel extends LitElement {
     return html`
       <div class="side-panel">
         <h3>Right panel</h3>
-        
+        something
       </div>
     `
   }
